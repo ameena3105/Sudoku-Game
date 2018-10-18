@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sudoku</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="problem();">
+	<div class="container">
+		<div class="game-control">
+			<h3 class="title">Sudoku Puzzle Game</h3>
+			<div class="card">
+				<div class="time">
+					<div class="label-text">Time</div>
+					<label id="minutes">00</label>:<label id="seconds">00</label>
+				</div>
+				<div id="gameOverModal" class="modal">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <span class="close">x</span>
+					  <h2>Game Over</h2>
+					</div>
+					<div class="modal-body">
+						<p>Your game is over. Please close the window and check the solution.</p>
+					</div>
+				  </div>
+				</div>
+				<div id="gameCompletedModal" class="modal">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <span class="close">x</span>
+					  <h2>Game Completed</h2>
+					</div>
+					<div class="modal-body">
+						<h3>Congratulations</h3>
+						<p>You have successfully Completed the Game.</p>
+					</div>
+				  </div>
+				</div>
+				<div>
+					<button id="newGame" class="btn">New Game</button> 
+					<button id="reset" class="btn" onclick="resetGame();">Reset</button>
+					<button id="solution" class="btn" onclick="solve();">Solution</button>
+				</div>
+			</div>
+			<div id="gameLevelModal" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <span class="close">x</span>
+				  <h2>Level of Game</h2>
+				</div>
+				<div class="modal-body">
+					<button id="levelEasy" class="btn">Easy</button>
+					<button id="levelMedium" class="btn">Medium</button>
+					<button id="levelHard" class="btn">Hard</button>
+				</div>
+			  </div>
+			</div>
+			  
+		</div>
+		<div class="game-board">
+			<table id="sudoku" class="sudoku-board" cellspacing=0>
+				
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="sudoku.js"></script>
+</body>
+</html>
